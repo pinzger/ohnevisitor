@@ -24,6 +24,7 @@ public abstract class Komponente {
         return this.preis;
     }
 
+    // zusätzliche Funktionalität
     public void prettyPrintName() {
         System.out.println(getName());
     }
