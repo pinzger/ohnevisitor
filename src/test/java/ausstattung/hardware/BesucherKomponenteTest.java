@@ -37,13 +37,12 @@ public class BesucherKomponenteTest {
             if (komponente instanceof Rechner) {
                 gesamtPreis += ((Rechner) komponente).berechneSpezialPreis();
             } else {
-                gesamtPreis += komponente.getPreis();
+                gesamtPreis += komponente.berechnePreis();
             }
         }
 
         assertEquals(3000d * 0.5d + 488d + 89d + 120d, gesamtPreis);
     }
-
 
     @Test
     public void prettyPrintNamen() {
