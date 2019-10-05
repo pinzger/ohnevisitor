@@ -20,6 +20,20 @@ public class BesucherKomponenteTest {
     }
 
     @Test
+    public void prettyPrintNamen() {
+        for (Komponente komponente : ausstattung.getKomponenten()) {
+            komponente.prettyPrintName();
+        }
+    }
+
+    @Test
+    public void prettyPrintKategorienUndNamen() {
+        for (Komponente komponente : ausstattung.getKomponenten()) {
+            komponente.prettyPrintKategorieUndName();
+        }
+    }
+
+    @Test
     public void berechneGesamtpreis() {
         double gesamtPreis = 0d;
         for (Komponente komponente : ausstattung.getKomponenten()) {
@@ -42,19 +56,5 @@ public class BesucherKomponenteTest {
         }
 
         assertEquals(3000d * 0.5d + 488d + 89d + 120d, gesamtPreis);
-    }
-
-    @Test
-    public void prettyPrintNamen() {
-        for (Komponente komponente : ausstattung.getKomponenten()) {
-            komponente.prettyPrintName();
-        }
-    }
-
-    @Test
-    public void prettyPrintKategorienUndNamen() {
-        for (Komponente komponente : ausstattung.getKomponenten()) {
-            komponente.prettyPrintKategorieUndName();
-        }
     }
 }
